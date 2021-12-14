@@ -1,0 +1,112 @@
+.bg-batik {
+    background: url('image/batik.jpg');
+}
+
+.bg-batik-2 {
+    background: url('image/batik-2.png');
+}
+
+.bg-batik-3 {
+    background: url('image/batik-3.png');
+}
+
+.aclonica {
+    font-family: 'Aclonica', sans-serif;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.color-1 {
+    color: #4F091D;
+}
+
+.color-2 {
+    color: #676767;
+}
+
+.bg-color-1 {
+    background-color: #4F091D;
+}
+
+.bg-color-2 {
+    background-color: #97BFB4;
+}
+
+.bg-color-3 {
+    background-color: #DD4A48;
+}
+
+.bg-color-4 {
+    background-color: #F2E888;
+}
+
+.shadows-lg {
+    box-shadow: -5px 0px 20px 5px rgba(0, 0, 0, 0.251);
+}
+
+.wpu-logo {
+    width: 20%;
+}
+
+@media screen and (min-width: 992px) {
+    .wpu-logo {
+        width: 10%;
+    }
+
+    .h-65s {
+        height: 65vh;
+    }
+
+    .h-75s {
+        height: 75vh;
+    }
+}
+
+/* animated modals */
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.faster {
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

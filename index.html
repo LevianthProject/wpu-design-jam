@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aclonica&family=Montserrat:wght@400;600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body class="bg-batik-3">
+
+    <!-- jumbotron -->
+    <div class="w-full h-screen flex items-center justify-center bg-batik-3">
+        <div class="md:container text-center md:-mt-6 -mt-10">
+            <img src="image/wpu-logo-hitam-polos.png" class="mx-auto wpu-logo" alt="">
+            <h3 class="color-1 text-lg md:text-3xl montserrat">EVENT OF THE YEAR</h3>
+            <h1 class="text-5xl md:text-8xl font-bold mt-1 aclonica color-1">DESIGN JAM</h1>
+            <p class="montserrat text-md md:text-2xl md:pt-7 pt-2.5 pb-4">21-27 Desember 2021</p>
+            <button class="bg-color-1 text-white py-2.5 text-sm md:text-xl px-6 montserrat rounded-md">Daftar
+                Sekarang!</button>
+        </div>
+    </div>
+
+    <!-- about -->
+    <div data-aos="fade-up"
+        class="w-full rounded-3xl shadows-lg shadow-black -mt-8 h-screen flex justify-center bg-color-2">
+        <div class="sm:container py-7 px-10 text-center">
+            <h1 class="text-lg md:text-3xl font-bold montserrat text-black mt-12">ABOUT THE EVENT</h1>
+            <p class="montserrat text-sm md:text-lg font-semibold color-2 mt-10 tracking-wider">EVENT APA SIH INI?</p>
+            <p class="open-sans mt-2 text-sm md:text-lg "> <span class="font-bold">Design Jam</span> adalah event yang
+                diselenggarakan oleh moderator server
+                discord WPU untuk
+                mengasah dan
+                mengembangkan keterampilan design kamu, khususnya di bidang UI/UX.</p>
+            <p class="montserrat text-sm md:text-lg font-semibold color-2 mt-10 tracking-wider">KAPAN EVENTNYA DIADAKAN?
+            </p>
+            <p class="open-sans mt-2 text-sm md:text-lg ">Event ini dilaksanakan selama <span class="font-bold">tanggal
+                    21-27 Desember 2021</span></p>
+            <p class="montserrat text-sm md:text-lg font-semibold color-2 mt-10 tracking-wider">GIMANA CARA IKUT
+                EVENTNYA?
+            </p>
+            <p class="open-sans mt-2 text-sm md:text-lg ">Pastikan kamu sudah bergabung di server discord WPU. Klik
+                <a href="" class="font-bold">di sini</a> untuk mendaftar. Pendaftaran ditutup setelah kuota peserta
+                habis. <br>
+                <span class="font-bold">
+                    Design dan
+                    menangkan
+                    hadiahnya!
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <!-- daftar -->
+    <div data-aos="fade-up"
+        class="w-full rounded-3xl shadows-lg shadow-black md:-mt-28 -mt-20 h-100 pt-5 pb-12  bg-color-3">
+        <div class="sm:container py-6 px-10 text-center gap-5 flex justify-center flex-row">
+            <h1 class="text-lg md:text-3xl font-bold montserrat text-white mt-1">DAFTARKAN DIRIMU SEKARANG!</h1>
+            <button onclick="openModal()" class="bg-color-1 text-white py-2 px-8 montserrat rounded-md">Daftar</button>
+        </div>
+    </div>
+
+    <!-- modal  -->
+    <div class="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
+        style="background: rgba(0,0,0,.7);">
+        <div
+            class="shadow-lg modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+            <div class="modal-content pt-2 pb-4 text-left px-6">
+                <!--Body-->
+                <div class="mb-3 montserrat">
+                    <form class="bg-white p-8 rounded-lg shadow-lg min-w-full">
+                        <h1 class="text-center text-2xl mb-6 text-gray-600 font-bold font-sans">Daftar Event of The Year
+                        </h1>
+                        <div>
+                            <label class="text-gray-800 font-semibold block my-3 text-md" for="username">Nama</label>
+                            <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text"
+                                name="username" id="username" placeholder="username" />
+                        </div>
+                        <div>
+                            <label class="text-gray-800 font-semibold block my-3 text-md" for="email">Email</label>
+                            <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text"
+                                name="email" id="email" placeholder="@email" />
+                        </div>
+                        <div>
+                            <label class="text-gray-800 font-semibold block my-3 text-md" for="username">Username
+                                Discord</label>
+                            <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text"
+                                name="username" id="username" placeholder="username#9999" />
+                        </div>
+                        <p class="cursor-default font-light text-xs mt-4 text-center text-gray-400 ">Dengan mengeklik
+                            daftar, kamu setuju
+                            dengan peraturan
+                            yang
+                            ditetapkan.
+                        </p>
+                    </form>
+                </div>
+                <!--Footer-->
+                <div class="flex flex-col justify-center">
+                    <button type="submit"
+                        class="modal-close w-full my-3 bg-indigo-600 rounded-lg px-4 py-2 text-lg text-white tracking-wide font-semibold font-sans">Daftar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- rules -->
+    <div data-aos="fade-up"
+        class="w-full rounded-3xl shadows-lg shadow-black -mt-10 h-65s flex justify-center bg-color-4">
+        <div class="sm:container md:px-14 px-5 md:mt-16 pt-10 pb-14 md:py-0">
+            <h1 class="text-lg md:text-3xl font-bold montserrat text-black mt-1 text-center">RULES</h1>
+            <ul class="lg:mx-10 lg:px-16 md:mt-8 montserrat">
+                <li>1. Peserta merupakan anggota server discord WPU.</li>
+                <li>2. Peserta melakukan registrasi di website yang sudah disediakan.</li>
+                <li>3. Peserta wajib menggunakan resource yang bersifat free.</li>
+                <li>4. Peserta wajib mengumpulkan karya original sesuai tema
+                    (menggunakan referensi diperbolehkan, tapi
+                    tidak untuk dibuat sama persis / copypaste).</li>
+                <li>5. Dilarang menggunakan / memuat konten berbau SARA, dan NSFW.</li>
+                <li>6. Peserta yang terbukti melanggaran peraturan akan didiskualifikasi.</li>
+                <li>7. Peserta wajib mengumpulkan hasil design pada tanggal 24 Desember 2021 pukul 15.00 WIB.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ketentuan -->
+    <div data-aos="fade-up"
+        class="w-full z-30 rounded-t-3xl shadows-lg shadow-black md:-mt-14 -mt-10 md:h-screen h-full flex justify-center bg-batik-3">
+        <div class="sm:container md:px-14 px-5 md:py-0 py-10 md:mt-20">
+            <h1 class="text-lg md:text-3xl font-bold montserrat text-black md:mt-8 mt-5 text-center">KETENTUAN</h1>
+            <ul class="lg:mx-8 lg:px-10 md:mt-12 text-md md:text-xl montserrat">
+                <li>1. Event Of The Year WPU dilaksanakan pada hari <span class="font-bold">Selasa, 21 Desember, Pukul
+                        09.00 WIB</span> Sampai dengan
+                    <span class="font-bold"> Jumat, 24 Desember, Pukul 15.00</span>
+                </li>
+                <li>2. Peserta yang ingin mendaftar silahkan daftar terlebih dahulu disini. </li>
+                <li>3. Kuota Peserta terbatas hanya 50 pendaftar pertama. </li>
+                <li>4. Peserta akan disediakan thread khusus untuk Q&A.</li>
+                <li>5. Peserta yang sudah terdaftar akan diberikan link figma untuk membuat design, link tersebut bisa
+                    diakses edit saat waktu pelaksanaan.
+                </li>
+                <li>6. Proses membuat design dilakukan secara perorangan, peserta harus membuat design pada
+                    <span class="font-bold">Page yang berbeda </span> dengan peserta lainnya, dan dengan ketentuan nama
+                    page menggunakan nama sendiri
+                </li>
+                <li>7. Bagi peserta yang lolos 5 terbaik akan di review dan Live di youtube
+                    <span class="font-bold">WEB PROGRAMMING UNPAS</span> pada
+                    <span class="font-bold">tanggal 26 Desember 2021, Pukul 19.30</span></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- modal scripts -->
+    <script>
+        const modal = document.querySelector('.main-modal');
+        const closeButton = document.querySelectorAll('.modal-close');
+
+        const modalClose = () => {
+            modal.classList.remove('fadeIn');
+            modal.classList.add('fadeOut');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 500);
+        }
+
+        const openModal = () => {
+            modal.classList.remove('fadeOut');
+            modal.classList.add('fadeIn');
+            modal.style.display = 'flex';
+        }
+
+        for (let i = 0; i < closeButton.length; i++) {
+
+            const elements = closeButton[i];
+
+            elements.onclick = (e) => modalClose();
+
+            modal.style.display = 'none';
+
+            window.onclick = function (event) {
+                if (event.target == modal) modalClose();
+            }
+        }
+    </script>
+
+
+    <!-- AOS scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
