@@ -1,3 +1,30 @@
+/* Author : Levianth */
+/* Github : https://github.com/LevianthProject */
+
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #bdbdbd transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #bdbdbd;
+    border-radius: 20px;
+    border: 3px solid transparent;
+}
+
+
+
 .bg-batik {
     background: url('image/batik.jpg');
 }

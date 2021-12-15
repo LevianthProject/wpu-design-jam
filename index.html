@@ -29,8 +29,10 @@
             <h3 class="color-1 text-lg md:text-3xl montserrat">EVENT OF THE YEAR</h3>
             <h1 class="text-5xl md:text-8xl font-bold mt-1 aclonica color-1">DESIGN JAM</h1>
             <p class="montserrat text-md md:text-2xl md:pt-7 pt-2.5 pb-4">21-27 Desember 2021</p>
-            <button class="bg-color-1 text-white py-2.5 text-sm md:text-xl px-6 montserrat rounded-md">Daftar
-                Sekarang!</button>
+            <a href="#daftarSection">
+                <button class="bg-color-1 text-white py-2.5 text-sm md:text-xl px-6 montserrat rounded-md">Daftar
+                    Sekarang!</button>
+            </a>
         </div>
     </div>
 
@@ -38,9 +40,10 @@
     <div data-aos="fade-up"
         class="w-full rounded-3xl shadows-lg shadow-black -mt-8 h-screen flex justify-center bg-color-2">
         <div class="sm:container py-7 px-10 text-center">
-            <h1 class="text-lg md:text-3xl font-bold montserrat text-black mt-12">ABOUT THE EVENT</h1>
+            <h1 class="text-lg md:text-3xl font-bold montserrat text-black md:mt-3 mt-6 lg:mt-12">ABOUT THE EVENT</h1>
             <p class="montserrat text-sm md:text-lg font-semibold color-2 mt-10 tracking-wider">EVENT APA SIH INI?</p>
-            <p class="open-sans mt-2 text-sm md:text-lg "> <span class="font-bold">Design Jam</span> adalah event yang
+            <p class="open-sans mt-2 text-sm md:text-lg " id="daftarSection"> <span class="font-bold">Design Jam</span>
+                adalah event yang
                 diselenggarakan oleh moderator server
                 discord WPU untuk
                 mengasah dan
@@ -52,8 +55,9 @@
             <p class="montserrat text-sm md:text-lg font-semibold color-2 mt-10 tracking-wider">GIMANA CARA IKUT
                 EVENTNYA?
             </p>
-            <p class="open-sans mt-2 text-sm md:text-lg ">Pastikan kamu sudah bergabung di server discord WPU. Klik
-                <a href="" class="font-bold">di sini</a> untuk mendaftar. Pendaftaran ditutup setelah kuota peserta
+            <p class="open-sans mt-2 text-sm md:text-lg ">Pastikan kamu sudah bergabung di server
+                discord WPU. Klik tombol dibawah. Pendaftaran ditutup
+                setelah kuota peserta
                 habis. <br>
                 <span class="font-bold">
                     Design dan
@@ -66,10 +70,12 @@
 
     <!-- daftar -->
     <div data-aos="fade-up"
-        class="w-full rounded-3xl shadows-lg shadow-black md:-mt-28 -mt-20 h-100 pt-5 pb-12 flex justify-center bg-color-3">
-        <div class="sm:container py-6 px-10 text-center gap-5 flex justify-center flex-row">
+        class="w-full rounded-3xl shadows-lg shadow-black md:-mt-28 lg:-mt-32 -mt-20 h-100 pt-5 pb-12 flex justify-center bg-color-3">
+        <div
+            class="sm:container py-6 lg:px-10 md:px-16 px-6 text-center gap-5 flex justify-center flex-col lg:flex-row">
             <h1 class="text-lg md:text-3xl font-bold montserrat text-white mt-1">DAFTARKAN DIRIMU SEKARANG!</h1>
-            <button onclick="openModal()" class="bg-color-1 text-white py-2 px-8 montserrat rounded-md">Daftar</button>
+            <button onclick="openModal()"
+                class="bg-color-1 text-white py-2 lg:mx-0 mx-auto px-4 md:w-1/2 lg:w-1/12 md:px-8 montserrat rounded-md">Daftar</button>
         </div>
     </div>
 
@@ -100,7 +106,7 @@
                             <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text"
                                 name="username" id="username" placeholder="username#9999" />
                         </div>
-                        <p class="cursor-default font-light text-xs mt-4 text-center text-gray-400 ">Dengan mengeklik
+                        <p class="cursor-default font-light text-xs mt-4 text-center text-gray-400 ">Dengan klik
                             daftar, kamu setuju
                             dengan peraturan
                             yang
@@ -120,46 +126,48 @@
     <!-- rules -->
     <div data-aos="fade-up"
         class="w-full rounded-3xl shadows-lg shadow-black -mt-10 h-65s flex justify-center bg-color-4">
-        <div class="sm:container md:px-14 px-5 md:mt-16 pt-10 pb-14 md:py-0">
+        <div class="sm:container md:px-14 px-5 lg:pt-10 pb-20 pt-8 lg:pb-20 md:pb-24 md:pt-8">
             <h1 class="text-lg md:text-3xl font-bold montserrat text-black mt-1 text-center">RULES</h1>
-            <ul class="lg:mx-10 lg:px-16 md:mt-8 montserrat">
-                <li>1. Peserta merupakan anggota server discord WPU.</li>
-                <li>2. Peserta melakukan registrasi di website yang sudah disediakan.</li>
-                <li>3. Peserta wajib menggunakan resource yang bersifat free.</li>
-                <li>4. Peserta wajib mengumpulkan karya original sesuai tema
+            <ol class="list-decimal lg:mx-10 lg:px-16 px-8 md:mt-8 montserrat">
+                <li>Peserta merupakan anggota server discord WPU.</li>
+                <li>Peserta melakukan registrasi di website yang sudah disediakan.</li>
+                <li>Peserta wajib menggunakan resource yang bersifat free.</li>
+                <li>Peserta wajib mengumpulkan karya original sesuai tema
                     (menggunakan referensi diperbolehkan, tapi
                     tidak untuk dibuat sama persis / copypaste).</li>
-                <li>5. Dilarang menggunakan / memuat konten berbau SARA, dan NSFW.</li>
-                <li>6. Peserta yang terbukti melanggaran peraturan akan didiskualifikasi.</li>
-                <li>7. Peserta wajib mengumpulkan hasil design pada tanggal 24 Desember 2021 pukul 15.00 WIB.</li>
-            </ul>
+                <li>Dilarang menggunakan / memuat konten berbau SARA, dan NSFW.</li>
+                <li>Peserta yang terbukti melanggaran peraturan akan didiskualifikasi.</li>
+                <li>Dengan mendaftar dan mengikuti event ini, peserta bersedia mengikuti semua peraturan yang telah
+                    ditetapkan.</li>
+                <li>Peserta wajib mengumpulkan hasil design pada tanggal 23 Desember 2021 pukul 15.00 WIB.</li>
+            </ol>
         </div>
     </div>
 
     <!-- ketentuan -->
     <div data-aos="fade-up"
         class="w-full z-30 rounded-t-3xl shadows-lg shadow-black md:-mt-14 -mt-10 md:h-screen h-full flex justify-center bg-batik-3">
-        <div class="sm:container md:px-14 px-5 md:py-0 py-10 md:mt-20">
+        <div class="sm:container md:px-14 px-5 md:py-0 py-10 lg:mt-20 md:14">
             <h1 class="text-lg md:text-3xl font-bold montserrat text-black md:mt-8 mt-5 text-center">KETENTUAN</h1>
-            <ul class="lg:mx-8 lg:px-10 md:mt-12 text-md md:text-xl montserrat">
-                <li>1. Event Of The Year WPU dilaksanakan pada hari <span class="font-bold">Selasa, 21 Desember, Pukul
+            <ol class="list-decimal lg:mx-8 lg:px-10 px-8 lg:mt-12 text-md md:text-xl montserrat">
+                <li>Event Of The Year WPU dilaksanakan pada hari <span class="font-bold">Senin, 20 Desember, Pukul
                         09.00 WIB</span> Sampai dengan
-                    <span class="font-bold"> Jumat, 24 Desember, Pukul 15.00</span>
+                    <span class="font-bold"> Minggu, 26 Desember, Pukul 15.00</span>
                 </li>
-                <li>2. Peserta yang ingin mendaftar silahkan daftar terlebih dahulu disini. </li>
-                <li>3. Kuota Peserta terbatas hanya 50 pendaftar pertama. </li>
-                <li>4. Peserta akan disediakan thread khusus untuk Q&A.</li>
-                <li>5. Peserta yang sudah terdaftar akan diberikan link figma untuk membuat design, link tersebut bisa
+                <li>Peserta yang ingin mendaftar silahkan daftar terlebih dahulu disini. </li>
+                <li>Kuota Peserta terbatas hanya 50 pendaftar pertama. </li>
+                <li>Peserta akan disediakan thread khusus untuk Q&A.</li>
+                <li>Peserta yang sudah terdaftar akan diberikan link figma untuk membuat design, link tersebut bisa
                     diakses edit saat waktu pelaksanaan.
                 </li>
-                <li>6. Proses membuat design dilakukan secara perorangan, peserta harus membuat design pada
+                <li>Proses membuat design dilakukan secara perorangan, peserta harus membuat design pada
                     <span class="font-bold">Page yang berbeda </span> dengan peserta lainnya, dan dengan ketentuan nama
                     page menggunakan nama sendiri
                 </li>
-                <li>7. Bagi peserta yang lolos 5 terbaik akan di review dan Live di youtube
+                <li>Bagi peserta yang lolos 5 terbaik akan di review dan Live di youtube
                     <span class="font-bold">WEB PROGRAMMING UNPAS</span> pada
                     <span class="font-bold">tanggal 26 Desember 2021, Pukul 19.30</span></li>
-            </ul>
+            </ol>
         </div>
     </div>
 
