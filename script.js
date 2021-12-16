@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:5000";
+const baseUrl = "https://designjam.bellshade.org/api";
 
 $(document).ready(async function () {
   $("#quota").ready(function () {
