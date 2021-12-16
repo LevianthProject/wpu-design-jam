@@ -9,6 +9,11 @@ $(document).ready(async function () {
       success: function (data) {
         console.log(data.remaining);
         $("#quota").text(`Kuota peserta sisa ${data.remaining}`);
+
+        if (data.remaining == 0) {
+          $("#text-daftar").text("MOHON MAAF KUOTA PESERTA SUDAH HABIS");
+          $("#btn-daftar").addClass("hidden");
+        }
       },
     });
   });
