@@ -34,7 +34,7 @@
             <img src="image/wpu-logo-hitam-polos.png" class="mx-auto wpu-logo" alt="">
             <h3 class="color-1 text-lg md:text-3xl montserrat">EVENT OF THE YEAR</h3>
             <h1 class="text-5xl md:text-8xl font-bold mt-1 aclonica color-1">DESIGN JAM</h1>
-            <p class="montserrat text-md md:text-2xl md:pt-7 pt-2.5 pb-4">21-27 Desember 2021</p>
+            <p class="montserrat text-md md:text-2xl md:pt-7 pt-2.5 pb-4">20-26 Desember 2021</p>
             <a href="#daftarSection">
                 <button class="bg-color-1 text-white py-2.5 text-sm md:text-xl px-6 montserrat rounded-md">Daftar
                     Sekarang!</button>
@@ -57,12 +57,12 @@
             <p class="montserrat text-sm md:text-lg font-semibold color-2 mt-10 tracking-wider">KAPAN EVENTNYA DIADAKAN?
             </p>
             <p class="open-sans mt-2 text-sm md:text-lg ">Event ini dilaksanakan selama <span class="font-bold">tanggal
-                    21-27 Desember 2021</span></p>
+                    20-26 Desember 2021</span></p>
             <p class="montserrat text-sm md:text-lg font-semibold color-2 mt-10 tracking-wider">GIMANA CARA IKUT
                 EVENTNYA?
             </p>
             <p class="open-sans mt-2 text-sm md:text-lg ">Pastikan kamu sudah bergabung di server
-                discord WPU. Klik tombol di bawah. Pendaftaran ditutup
+                discord WPU. Klik tombol di bawah untuk mendaftar. Pendaftaran ditutup
                 setelah kuota peserta
                 habis. <br>
                 <span class="font-bold">
@@ -71,6 +71,8 @@
                     hadiahnya!
                 </span>
             </p>
+
+            <p class="montserrat text-xl md:text-xl font-semibold mt-10 tracking-wider" id="quota"></p>
         </div>
     </div>
 
@@ -80,51 +82,61 @@
         <div
             class="sm:container py-10 lg:px-10 md:px-16 px-6 text-center gap-5 flex justify-center flex-col lg:flex-row">
             <h1 class="text-lg md:text-3xl font-bold montserrat text-white mt-1">DAFTARKAN DIRIMU SEKARANG!</h1>
+        class="w-full rounded-3xl shadows-lg shadow-black md:-mt-28 lg:-mt-32 -mt-20 h-100 pt-5 pb-12 flex justify-center bg-color-3">
+        <div class="sm:container py-6 lg:px-10 md:px-16 px-6 text-center gap-5 flex justify-center flex-col lg:flex-row"
+            id="daftar">
+            <h1 class="text-lg md:text-3xl font-bold montserrat text-white mt-1" id="text-daftar">DAFTARKAN DIRIMU
+                SEKARANG!</h1>
             <button onclick="openModal()"
-                class="bg-color-1 text-white py-2 lg:mx-0 mx-auto px-4 md:w-1/2 lg:w-auto md:px-8 montserrat rounded-md">Daftar</button>
+                class="bg-color-1 text-white py-2 lg:mx-0 mx-auto px-4 md:w-1/2 lg:w-auto md:px-8 montserrat rounded-md"
+                id="btn-daftar">Daftar</button>
         </div>
     </div>
 
     <!-- modal  -->
     <div class="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
-        style="background: rgba(0,0,0,.7);">
+        style="background: rgba(0,0,0,.7); display: none;">
         <div
             class="shadow-lg modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
             <div class="modal-content pt-2 pb-4 text-left px-6">
-                <!--Body-->
-                <div class="mb-3 montserrat">
-                    <form class="bg-white p-8 rounded-lg shadow-lg min-w-full">
-                        <h1 class="text-center text-2xl mb-6 text-gray-600 font-bold font-sans">Daftar Event of The Year
-                        </h1>
-                        <div>
-                            <label class="text-gray-800 font-semibold block my-3 text-md" for="username">Nama</label>
-                            <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text"
-                                name="username" id="username" placeholder="username" />
+                <form id="register">
+                    <!--Body-->
+                    <div class="mb-3 montserrat">
+                        <div class="bg-white p-8 rounded-lg shadow-lg min-w-full">
+                            <h1 class="text-center text-2xl mb-6 text-gray-600 font-bold font-sans">Daftar Event of the
+                                Year
+                            </h1>
+                            <div>
+                                <label class="text-gray-800 font-semibold block my-3 text-md" for="name">Nama</label>
+                                <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text"
+                                    name="name" id="name" placeholder="name" />
+                            </div>
+                            <div>
+                                <label class="text-gray-800 font-semibold block my-3 text-md" for="email">Email</label>
+                                <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text"
+                                    name="email" id="email" placeholder="example@email.com" />
+                            </div>
+                            <div>
+                                <label class="text-gray-800 font-semibold block my-3 text-md" for="username">Username
+                                    Discord</label>
+                                <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text"
+                                    name="username" id="username" placeholder="username#9999" />
+                            </div>
+                            <p class="cursor-default font-light text-xs mt-4 text-center text-gray-400 ">Dengan klik
+                                daftar, kamu setuju
+                                dengan peraturan
+                                yang
+                                ditetapkan.
+                            </p>
                         </div>
-                        <div>
-                            <label class="text-gray-800 font-semibold block my-3 text-md" for="email">Email</label>
-                            <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text"
-                                name="email" id="email" placeholder="@email" />
-                        </div>
-                        <div>
-                            <label class="text-gray-800 font-semibold block my-3 text-md" for="username">Username
-                                Discord</label>
-                            <input class="w-full bg-gray-100 px-4 py-2 rounded-lg focus:outline-none" type="text"
-                                name="username" id="username" placeholder="username#9999" />
-                        </div>
-                        <p class="cursor-default font-light text-xs mt-4 text-center text-gray-400 ">Dengan klik
-                            daftar, kamu setuju
-                            dengan peraturan
-                            yang
-                            ditetapkan.
-                        </p>
-                    </form>
-                </div>
-                <!--Footer-->
-                <div class="flex flex-col justify-center">
-                    <button type="submit"
-                        class="modal-close w-full my-3 bg-indigo-600 rounded-lg px-4 py-2 text-lg text-white tracking-wide font-semibold font-sans">Daftar</button>
-                </div>
+                    </div>
+                    <!--Footer-->
+                    <div class="flex flex-col justify-center">
+                        <p class="cursor-default text-xs mt-4 text-center text-red-500 hidden" id="error-msg"></p>
+                        <button type="submit" id="btn-submit"
+                            class="w-full my-3 bg-indigo-600 rounded-lg px-4 py-2 text-lg text-white tracking-wide font-semibold font-sans">Daftar</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -139,9 +151,9 @@
                 <li>Peserta melakukan registrasi di website yang sudah disediakan.</li>
                 <li>Peserta wajib menggunakan resource yang bersifat free.</li>
                 <li>Peserta wajib mengumpulkan karya original sesuai tema
-                    (menggunakan referensi diperbolehkan, tapi
-                    tidak untuk dibuat sama persis / copypaste).</li>
-                <li>Dilarang menggunakan / memuat konten berbau SARA dan NSFW.</li>
+                    (menggunakan referensi diperbolehkan, tetapi
+                    tidak untuk dibuat sama persis/copypaste).</li>
+                <li>Dilarang menggunakan/memuat konten berbau SARA dan NSFW.</li>
                 <li>Peserta yang terbukti melanggar peraturan akan didiskualifikasi.</li>
                 <li>Dengan mendaftar dan mengikuti event ini, peserta bersedia mengikuti semua peraturan yang telah
                     ditetapkan.</li>
@@ -160,19 +172,23 @@
                         09.00 WIB</span> Sampai dengan
                     <span class="font-bold"> Minggu, 26 Desember 2021, Pukul 15.00 WIB</span>
                 </li>
-                <li>Peserta yang ingin mendaftar silahkan daftar terlebih dahulu disini. </li>
-                <li>Kuota Peserta terbatas hanya 50 pendaftar pertama. </li>
+                <li>Peserta yang ingin mengikuti event harus mendaftar terlebih dahulu di sini <span
+                        class="font-bold">sebelum
+                        tanggal 20 Desember 2021</span>. </li>
+                <li>Kuota peserta terbatas hanya 50 pendaftar pertama. </li>
                 <li>Peserta akan disediakan thread khusus untuk Q&A.</li>
-                <li>Peserta yang sudah terdaftar akan diberikan link figma untuk membuat design, link tersebut bisa
+                <li>Peserta yang sudah terdaftar akan diberikan link figma untuk mengupload hasil design, link tersebut
+                    bisa
                     diakses edit saat waktu pelaksanaan.
                 </li>
-                <li>Proses membuat design dilakukan secara perorangan, peserta harus membuat design pada
-                    <span class="font-bold">Page yang berbeda </span> dengan peserta lainnya, dan dengan ketentuan nama
-                    page menggunakan nama sendiri
+                <li>Pengerjaan design dilakukan secara perorangan. Peserta harus mengupload design pada
+                    <span class="font-bold">page yang berbeda </span> dengan peserta lainnya, dengan ketentuan nama
+                    page menggunakan nama sendiri.
                 </li>
-                <li>Bagi peserta yang lolos 5 terbaik akan di review dan Live di youtube
+                <li>Bagi peserta yang masuk kategori 5 terbaik akan direview secara Live di Youtube
                     <span class="font-bold">WEB PROGRAMMING UNPAS</span> pada
-                    <span class="font-bold">tanggal 26 Desember 2021, Pukul 19.30 WIB</span></li>
+                    <span class="font-bold">tanggal 25 Desember 2021 pukul 19.30 WIB</span>.
+                </li>
             </ol>
         </div>
     </div>
@@ -204,10 +220,10 @@
             elements.onclick = (e) => modalClose();
 
             modal.style.display = 'none';
+        }
 
-            window.onclick = function (event) {
-                if (event.target == modal) modalClose();
-            }
+        window.onclick = function (event) {
+            if (event.target == modal) modalClose();
         }
     </script>
 
@@ -217,6 +233,10 @@
     <script>
         AOS.init();
     </script>
+
+    <!-- I LOVE JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
