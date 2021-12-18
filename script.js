@@ -7,8 +7,7 @@ $(document).ready(async function () {
       method: "GET",
       dataType: "json",
       success: function (data) {
-        console.log(data.remaining);
-        $("#quota").text(`Kuota peserta sisa ${data.remaining}`);
+        // $("#quota").text(`Kuota peserta sisa ${data.remaining}`);
 
         if (data.remaining == 0) {
           $("#text-daftar").text("MOHON MAAF KUOTA PESERTA SUDAH HABIS");
@@ -26,7 +25,6 @@ $(document).ready(async function () {
     let username = $("#username").val();
 
     body = { name, email, username };
-    console.log(body);
 
     try {
       const response = await fetch(baseUrl + "/register", {
@@ -37,7 +35,6 @@ $(document).ready(async function () {
         body: JSON.stringify(body),
       });
 
-      console.log(response);
       const resBody = await response.json();
 
       if (response.status == 200) {
@@ -45,6 +42,7 @@ $(document).ready(async function () {
         $("#quota").text(`Kuota peserta sisa ${quota.remaining}`);
         $("#btn-submit").addClass("modal-close");
         modalClose();
+        openModalSuccess();
       } else {
         $("#error-msg").text(resBody.message);
         $("#error-msg").removeClass("hidden");
