@@ -81,6 +81,11 @@
     width: 20%;
 }
 
+.success-logo {
+    width: 20%;
+    margin-bottom: 1.5rem;
+}
+
 @media screen and (min-width: 992px) {
     .wpu-logo {
         width: 10%;

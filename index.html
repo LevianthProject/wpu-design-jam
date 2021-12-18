@@ -18,7 +18,8 @@
     <meta property="og:image:alt" content="WPU DESIGN JAM">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:description" content="Design Jam adalah event yang diselenggarakan oleh moderator server discord WPU untuk mengasah dan mengembangkan keterampilan design kamu, khususnya di bidang UI/UX.">
+    <meta property="og:description"
+        content="Design Jam adalah event yang diselenggarakan oleh moderator server discord WPU untuk mengasah dan mengembangkan keterampilan design kamu, khususnya di bidang UI/UX.">
     <meta property="og:title" content="WPU DESIGN JAM">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://designjam.bellshade.org">
@@ -77,19 +78,36 @@
                 </span>
             </p>
 
-            <p class="montserrat text-xl md:text-xl font-semibold mt-10 tracking-wider" id="quota"></p>
+            <!-- <p class="montserrat text-xl md:text-xl font-semibold mt-10 tracking-wider" id="quota"></p> -->
         </div>
     </div>
 
     <!-- daftar -->
     <div data-aos="fade-up"
         class="w-full rounded-3xl shadows-lg shadow-black -mt-8 md:-mt-10 lg:-mt-12 h-100 pt-5 pb-12 flex justify-center bg-color-3">
-        <div class="sm:container py-10 lg:px-10 md:px-16 px-6 text-center gap-5 flex justify-center flex-col lg:flex-row">
+        <div
+            class="sm:container py-10 lg:px-10 md:px-16 px-6 text-center gap-5 flex justify-center flex-col lg:flex-row">
             <h1 class="text-lg md:text-3xl font-bold montserrat text-white mt-1" id="text-daftar">DAFTARKAN DIRIMU
                 SEKARANG!</h1>
             <button onclick="openModal()"
                 class="bg-color-1 text-white py-2 lg:mx-0 mx-auto px-4 md:w-1/2 lg:w-auto md:px-8 montserrat rounded-md"
                 id="btn-daftar">Daftar</button>
+        </div>
+    </div>
+
+    <!-- success modal  -->
+    <div class="success-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
+        style="background: rgba(0,0,0,.7); display: none;">
+        <div class="modal-content pt-2 pb-4 text-left px-6">
+            <!--Body-->
+            <div class="mb-3 montserrat">
+                <div class="bg-white p-8 rounded-lg shadow-lg min-w-full">
+                    <img src="image/success.png" class="mx-auto success-logo" alt="">
+                    <h1 class="text-center text-2xl mb-1 text-gray-600 font-bold font-sans">Berhasil!</h1>
+                    <p class="cursor-default text-sm text-center text-gray-400 ">Selamat! Kamu telah terdaftar.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -144,7 +162,8 @@
     <!-- rules -->
     <div data-aos="fade-up"
         class="w-full rounded-3xl shadows-lg shadow-black -mt-10 h-65s flex justify-center bg-color-4">
-        <div class="sm:container md:px-14 px-5 lg:pt-10 pb-20 pt-8 lg:pb-20 md:pb-24 md:pt-8 flex flex-col justify-center">
+        <div
+            class="sm:container md:px-14 px-5 lg:pt-10 pb-20 pt-8 lg:pb-20 md:pb-24 md:pt-8 flex flex-col justify-center">
             <h1 class="text-lg md:text-3xl font-bold montserrat text-black mt-1 text-center">RULES</h1>
             <ol class="list-decimal lg:mx-10 lg:px-16 px-8 md:mt-8 montserrat">
                 <li>Peserta merupakan anggota server discord WPU.</li>
@@ -197,6 +216,7 @@
     <!-- modal scripts -->
     <script>
         const modal = document.querySelector('.main-modal');
+        const successModal = document.querySelector('.success-modal');
         const closeButton = document.querySelectorAll('.modal-close');
 
         const modalClose = () => {
@@ -213,6 +233,20 @@
             modal.style.display = 'flex';
         }
 
+        const closeSuccessModal = () => {
+            successModal.classList.remove('fadeIn');
+            successModal.classList.add('fadeOut');
+            setTimeout(() => {
+                successModal.style.display = 'none';
+            }, 500);
+        }
+
+        const openModalSuccess = () => {
+            successModal.classList.remove('fadeOut');
+            successModal.classList.add('fadeIn');
+            successModal.style.display = 'flex';
+        }
+
         for (let i = 0; i < closeButton.length; i++) {
 
             const elements = closeButton[i];
@@ -224,6 +258,7 @@
 
         window.onclick = function (event) {
             if (event.target == modal) modalClose();
+            if (event.target == successModal) closeSuccessModal();
         }
     </script>
 
